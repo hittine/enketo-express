@@ -3,7 +3,7 @@ name: Build and push image to Docker Hub
 on:
     push:
         branches:
-            - main
+            - dev
         # Don't waste time building every push: consider only tags, which are
         # usually releases
         # tags:
