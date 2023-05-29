@@ -17,7 +17,8 @@ jobs:
             - uses: mr-smithers-excellent/docker-build-push@v2
               with:
                   image: rondcm/enketo-express
-                  tags: latest
+                #   tags: latest
+                  addLatest: true
                   registry: docker.io
                   dockerfile: Dockerfile
                   username: ${{ secrets.DOCKER_HUB_USERNAME }}
