@@ -13,11 +13,11 @@ jobs:
     docker-build-push:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2
-            - uses: mr-smithers-excellent/docker-build-push@v2
+            - uses: actions/checkout@v3
+            - uses: mr-smithers-excellent/docker-build-push@v6
               with:
                   image: rondcm/enketo-express
-                #   tags: latest
+                  # tags: latest
                   addLatest: true
                   registry: docker.io
                   dockerfile: Dockerfile
