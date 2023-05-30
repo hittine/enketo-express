@@ -13,7 +13,7 @@ public/css/*.css
 **/build/*
 translation_old.json
 app/views/styles/component/_widgets.scss
-config/config.json
+# config/config.json
 enketo-main.rdb
 setup/docker/secrets/*
 setup/docker/redis_main_data/*
