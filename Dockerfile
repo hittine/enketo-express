@@ -7,7 +7,13 @@ RUN npm install -g pm2@$(npm info pm2 version)
 
 COPY . ${ENKETO_SRC_DIR}
 
-RUN npm clean-install && npx grunt && npm prune --production
+RUN npm install && \
+    npm install https://github.com/kobotoolbox/enketo-image-customization-widget.git && \
+    npm install https://github.com/kobotoolbox/enketo-literacy-test-widget.git && \
+    npm clean-install && \
+    npx grunt && \
+    npm prune --production && \
+    rm config/config.json
 
 # Persist the `secrets` directory so the encryption key remains consistent.
 RUN mkdir -p ${ENKETO_SRC_DIR}/setup/docker/secrets
