@@ -31,7 +31,7 @@ export default {
         // Max 2 messages displayed
         this.feedbackBar.classList.add('feedback-bar--show');
         // React Native Post Messages
-        window.ReactNativeWebView.postMessage('survey-success');
+        window?.ReactNativeWebView?.postMessage('survey-success');
         const { messages } = this;
         if (messages.length > 1) {
             messages[1].remove();
